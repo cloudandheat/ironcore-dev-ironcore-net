@@ -3452,6 +3452,13 @@ func schema_ironcore_net_api_core_v1alpha1_NetworkSpec(ref common.ReferenceCallb
 							},
 						},
 					},
+					"enable_encryption": {
+						SchemaProps: spec.SchemaProps{
+							Description: "EnableEncryption specifies whether the traffic of this network shall be encrypted.",
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
 				},
 			},
 		},

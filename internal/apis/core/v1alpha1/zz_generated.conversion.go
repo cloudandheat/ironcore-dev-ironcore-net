@@ -2688,6 +2688,7 @@ func Convert_core_NetworkPolicySpec_To_v1alpha1_NetworkPolicySpec(in *core.Netwo
 func autoConvert_v1alpha1_NetworkSpec_To_core_NetworkSpec(in *corev1alpha1.NetworkSpec, out *core.NetworkSpec, s conversion.Scope) error {
 	out.ID = in.ID
 	out.Peerings = *(*[]core.NetworkPeering)(unsafe.Pointer(&in.Peerings))
+	out.EnableEncryption = in.EnableEncryption
 	return nil
 }
 
@@ -2699,6 +2700,7 @@ func Convert_v1alpha1_NetworkSpec_To_core_NetworkSpec(in *corev1alpha1.NetworkSp
 func autoConvert_core_NetworkSpec_To_v1alpha1_NetworkSpec(in *core.NetworkSpec, out *corev1alpha1.NetworkSpec, s conversion.Scope) error {
 	out.ID = in.ID
 	out.Peerings = *(*[]corev1alpha1.NetworkPeering)(unsafe.Pointer(&in.Peerings))
+	out.EnableEncryption = in.EnableEncryption
 	return nil
 }
 
